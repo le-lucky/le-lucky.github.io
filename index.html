@@ -7,9 +7,11 @@ function GetQueryString(name)
      if(r!=null)return  unescape(r[2]); return null;
 }
 var myurl=GetQueryString("url");
-if(myurl !=null && myurl.toString().length>1)
+var b=new Base64();
+var c=b.decode(myurl);
+if(c !=null && c.toString().length>1)
 {
-window.location.href=GetQueryString("url");
+window.location.href=c;
 }
 else
 {
