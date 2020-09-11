@@ -9,7 +9,7 @@ function GetQueryString(name)
 var myurl=GetQueryString("url");
 var b=new Base64();
 var c=b.decode(myurl);
-if(c !=null && c.toString().length>1)
+if(myurl !=null && myurl.toString().length>1)
 {
 window.location.href=c;
 }
